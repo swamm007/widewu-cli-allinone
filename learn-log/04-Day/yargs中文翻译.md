@@ -152,6 +152,37 @@ require('yargs/yargs')(process.argv.slice(2)).parse(argv, context)
   .help()
   .argv
   ```
+* .command的高级用法
+  * exports.command: 字符串（或字符串数​​组），当在命令行上给出时执行此命令，第一个字符串可能包含位置参数
+  * exports.aliases: 表示别名的字符串数组（或单个字符串） ，别名中exports.command定义的位置参数被忽略
+  * exports.describe: 用于帮助文本中命令描述的字符串，false用于隐藏命令
+  * exports.builder: 声明命令接受的选项的对象，或接受并返回 yargs 实例的函数
+  * exports.handler: 一个函数，将传递解析的 argv。
+  * exports.deprecated：一个布尔值（或字符串）来显示弃用通知。
+  * 举个例子
+  ```js
+  // my-module.js
+  exports.command = 'get <source> [proxy]'
+
+  exports.describe = 'make a get HTTP request'
+
+  exports.builder = {
+    banana: {
+      default: 'cool'
+    },
+    batman: {
+      default: 'sad'
+    }
+  }
+
+  exports.handler = function (argv) {
+    // do something with argv.
+  }
+  // 像这样注册模块
+  yargs.command(require('my-module'))
+  .help()
+  .argv
+  ```
 * .completion暂时未看懂是干嘛的 貌似也用不到的样子
 * .config 不知道有什么用途
 * extends  想不到使用场景
