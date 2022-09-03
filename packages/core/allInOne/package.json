@@ -8,7 +8,10 @@
   "author": "widewu <979610327@qq.com>",
   "homepage": "http://index.ts",
   "license": "ISC",
-  "main": "index.ts",
+  "main": "src/index.ts",
+  "bin": {
+    "all-in-one": "lib/index.js"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
