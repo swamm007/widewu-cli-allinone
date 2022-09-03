@@ -21,6 +21,7 @@
     "url": "git+https://github.com/swamm007/widewu-cli-allinone.git"
   },
   "scripts": {
+    "build": "tsc",
     "test": "node ./__tests__/allInOne.test.js"
   },
   "bugs": {
