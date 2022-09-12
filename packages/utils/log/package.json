@@ -1,0 +1,33 @@
+{
+  "name": "@widewu-cli-allinone/log",
+  "version": "1.0.0",
+  "description": "log",
+  "keywords": [
+    "log"
+  ],
+  "author": "widewu <979610327@qq.com>",
+  "homepage": "https://github.com/swamm007/widewu-cli-allinone#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swamm007/widewu-cli-allinone.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node ./__tests__/log.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/swamm007/widewu-cli-allinone/issues"
+  },
+  "dependencies": {
+    "npmlog": "^6.0.2"
+  }
+}

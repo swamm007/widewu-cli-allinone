@@ -1,11 +1,12 @@
 # `allInOne`
 
-> TODO: description
+> 脚手架的入口文件
 
-## Usage
+## 全局安装后即可使用
 
 ```
-const allinone = require('allInOne');
+npm install @widewu-cli-allinone/allinone
 
-// TODO: DEMONSTRATE API
+sh all-in-one --help
+
 ```

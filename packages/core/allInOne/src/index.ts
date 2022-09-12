@@ -1,5 +1,12 @@
 #!/usr/bin/env node
 
-const data: string = 'name'
+const importLocal = require('import-local')
+const log = require('npmlog')
 
-console.log('this is all-in-one cli', data)
+if (importLocal(__filename)) {
+  console.log('Using local version of this package')
+  log.info('all-in-one cli', 'you are using local version of cli')
+} else {
+  log.info('all-in-one cli', 'you are useing global cli')
+  require('./allInOne')(process.argv.slice(2))
+}

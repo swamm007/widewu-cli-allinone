@@ -27,7 +27,8 @@
   "workspaces": [
     "packages/commands/*",
     "packages/core/*",
-    "packages/utils/*"
+    "packages/utils/*",
+    "packages/models/*"
   ],
   "lint-staged": {
     "*.{js,ts}": "eslint --fix"
